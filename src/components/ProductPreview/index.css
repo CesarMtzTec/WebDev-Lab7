@@ -2,13 +2,13 @@
   margin: 1rem 0 !important;
 }
 
-div.mediumImage > img {
-  min-height: 5rem;
+div.mediumImage > a > img {
   left: 50%;
   transform: translateX(50%);
 }
 
 div.mediumImage {
+  min-height: 5rem;
   box-shadow: none;
   background-color: transparent;
 }
@@ -22,7 +22,8 @@ div.mediumImage {
 }
 
 .productDescription {
-  color: hsla(100, 100%, 0%, 0.5);
+  display: block;
+  color: hsla(100, 100%, 0%, 0.5) !important;
 }
 
 .productName {
