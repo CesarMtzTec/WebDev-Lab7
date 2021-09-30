@@ -1,6 +1,7 @@
 import './index.css';
-import { AppBar, IconButton, Typography, Toolbar } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom';
 
 /**
  * NavBar component
@@ -13,7 +14,9 @@ const NavBar = () => {
         <IconButton edge="start" aria-label="menu">
           <MenuIcon className="menuIcon" />
         </IconButton>
-        <Typography className="appTitle">Product Application</Typography>
+        <Link to="/" className="appTitle">
+          Product Application
+        </Link>
       </Toolbar>
     </AppBar>
   );
