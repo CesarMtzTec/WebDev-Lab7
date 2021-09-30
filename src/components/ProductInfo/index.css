@@ -13,8 +13,8 @@ div.largeImage {
   background-color: #fafafa;
 }
 
-.productName {
-  font-size: 3em !important;
+.productTitle {
+  font-size: 3rem !important;
 }
 
 .productColor,
@@ -39,4 +39,30 @@ div.largeImage {
 .crossedout {
   color: hsla(0, 100%, 50%, 0.5);
   text-decoration: line-through;
+}
+
+.commentsSection {
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.commentsTitle {
+  font-size: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.comment {
+  padding: 0.5rem;
+  border: 1px solid hsl(0, 0%, 80%);
+}
+
+.commentAuthor {
+  margin-bottom: 0.5rem !important;
+  font-size: 1.25rem !important;
+}
+
+.commentDate {
+  margin-top: 0.5rem !important;
+  font-size: 0.8rem !important;
+  color: hsl(0, 0%, 50%);
 }

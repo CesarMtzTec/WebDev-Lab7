@@ -58,6 +58,21 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
     });
   }
 
+  let comments: any[] = [];
+  if (product !== undefined && product.comments.length > 0) {
+    product.comments.forEach((comment) => {
+      comments.push(
+        <Grid item className="comment">
+          <Typography className="commentAuthor">{comment.author}</Typography>
+          <Typography>{comment.body}</Typography>
+          <Typography className="commentDate">{comment.created}</Typography>
+        </Grid>
+      );
+    });
+  }
+
+  console.log(product);
+
   return (
     <div className="productInfo">
       <Grid container className="productGrid" spacing={2}>
@@ -72,7 +87,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
 
         <Grid item lg={8} container>
           <Grid item lg={12}>
-            <Typography className="productName" variant="h1">
+            <Typography className="productTitle" variant="h1">
               {product.name}
             </Typography>
           </Grid>
@@ -137,8 +152,12 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
               Add to Cart
             </Button>
           </Grid>
-
-          <Grid item lg={12} />
+        </Grid>
+        <Grid item lg={12} className="commentsSection">
+          <Typography variant="h2" className="commentsTitle">
+            Comments
+          </Typography>
+          {comments}
         </Grid>
       </Grid>
     </div>
